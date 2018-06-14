@@ -1,0 +1,20 @@
+<div class="forms">
+<form method="POST" action="/users/register">    
+    <label for="uName">Username:</label>
+    <input type="text" name="username" id="uName" value="{{username}}" />
+    
+    <label for="pass">Password:</label>  
+    <input type="password" name="password" id="pass" value="{{password}}" />
+
+    <label for="cPass">Confirm Password:</label>  
+    <input type="password" name="confpassword" id="cPass" value="{{password}}" />
+
+    <label for="fName">First name:</label>
+    <input type="text" name="firstName" id="fName" value="{{firstName}}" />
+    
+    <label for="lName">Last name:</label>
+    <input type="text" name="lastName" id="lName" value="{{lastName}}" />
+    <br/>
+    <input type="submit" value="Register"/>
+</form>
+</div>

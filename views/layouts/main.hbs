@@ -11,12 +11,20 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
+            {{#if currentUser}}
+            <li>Hi, {{currentUser.username}}!</li>
+            {{else}}
+            <li><a href="/users/register">Register</a></li>
+            <li><a href="/users/login">Login</a></li>
+            {{/if}}
         </ul>
         </header>
-
-        {{{body}}}
-
-        
+        {{#if globalError}}
+        <div class="alert alert-danger">
+            {{globalError}}
+        </div>
+        {{/if}}
+        {{{body}}}      
     
         <footer>
             Copyright 2008
