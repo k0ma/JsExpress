@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-
+const User = require('../data/User')
 mongoose.Promise = global.Promise
 
 module.exports = (settings) => {
@@ -12,6 +12,7 @@ module.exports = (settings) => {
     }
 
     console.log('MongoDb ready!')
+    User.seedAdminUser()
   })
 
   db.on('error', err => {
