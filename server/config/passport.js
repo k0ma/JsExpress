@@ -9,7 +9,7 @@ module.exports = () => {
         return done(null, false)
       }
 
-      if (!user.authenticate(passport)) {
+      if (!user.authenticate(password)) {
         return done(null, false)
       }
 
@@ -24,13 +24,12 @@ module.exports = () => {
   })
 
   passport.deserializeUser((id, done) => {
-    User.findById(id)
-      .then(user => {
-        if (!user) {
-          return done(null, false)
-        }
+    User.findById(id).then(user => {
+      if (!user) {
+        return done(null, false)
+      }
 
-        return done(null, user)
-      })
+      return done(null, user)
+    })
   })
 }

@@ -12,6 +12,7 @@ module.exports = (settings) => {
     }
 
     console.log('MongoDb ready!')
+
     User.seedAdminUser()
   })
 

@@ -1,13 +1,13 @@
 <div class="forms">
 <form method="POST" action="/users/register">    
     <label for="uName">Username:</label>
-    <input type="text" name="username" id="uName" value="{{username}}" />
+    <input type="text" name="username" id="uName" />
     
     <label for="pass">Password:</label>  
-    <input type="password" name="password" id="pass" value="{{password}}" />
+    <input type="password" name="password" id="pass" />
 
-    <label for="cPass">Confirm Password:</label>  
-    <input type="password" name="confpassword" id="cPass" value="{{password}}" />
+    {{!-- <label for="cPass">Confirm Password:</label>  
+    <input type="password" name="confpassword" id="cPass" value="{{password}}" /> --}}
 
     <label for="fName">First name:</label>
     <input type="text" name="firstName" id="fName" value="{{firstName}}" />

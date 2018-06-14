@@ -19,7 +19,8 @@ module.exports = (app) => {
   app.use(session({
     secret: 'baba-vihronrav!@#$%',
     resave: false,
-    saveUninitialized: false }))
+    saveUninitialized: false
+  }))
   app.use(passport.initialize())
   app.use(passport.session())
 

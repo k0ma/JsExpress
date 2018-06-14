@@ -7,7 +7,6 @@ module.exports = {
   },
   registerPost: (req, res) => {
     let reqUser = req.body
-    // Add validations!
 
     let salt = encryption.generateSalt()
     let hashedPassword = encryption.generateHashedPassword(salt, reqUser.password)
@@ -24,9 +23,12 @@ module.exports = {
           res.locals.globalError = err
           res.render('users/register', user)
         }
-
         res.redirect('/')
       })
     })
+  },
+  logout: (req, res) => {
+    req.logout()
+    res.redirect('/')
   }
 }
